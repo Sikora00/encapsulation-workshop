@@ -8,11 +8,19 @@ import { NotEnoughMoneyToBuyProductError } from './errors/not-enough-money-to-bu
 export class Product {
   constructor(private readonly name: string, private readonly price: Money) {}
 
+  equals(product: Product): boolean {
+    return this.name === product.name;
+  }
+
   sell(customer: Customer): Either<NotEnoughMoneyToBuyProductError, Money> {
     const buy = customer.buy(new SoldProduct(this.name), this.price);
     if (isLeft(buy)) {
       return left(new NotEnoughMoneyToBuyProductError());
     }
     return buy;
+  }
+
+  toString(): string {
+    return this.name;
   }
 }
