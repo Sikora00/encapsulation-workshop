@@ -8,7 +8,7 @@ import { Customer } from '../../src/customer';
 import { Wallet } from '../../src/wallet';
 import { Either } from 'fp-ts/Either';
 
-const feature = loadFeature('specs/features/shop-for-products.feature');
+const feature = loadFeature('shop/specs/features/shop-for-products.feature');
 
 defineFeature(feature, (test) => {
   let redApple: Product;

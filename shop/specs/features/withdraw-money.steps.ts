@@ -4,7 +4,7 @@ import { Money } from '../../src/money';
 import { Either, isLeft, isRight } from 'fp-ts/Either';
 import { eitherToThrow } from '../../src/utils/either-to-throw';
 
-const feature = loadFeature('specs/features/withdraw-money.feature');
+const feature = loadFeature('shop/specs/features/withdraw-money.feature');
 
 defineFeature(feature, (test) => {
   test('Withdraw money from the wallet', ({ given, when, then, and }) => {

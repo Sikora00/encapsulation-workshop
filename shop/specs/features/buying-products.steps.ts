@@ -8,7 +8,7 @@ import { SoldProduct } from '../../src/sold-product';
 import { Either } from 'fp-ts/Either';
 import { NotEnoughMoneyToBuyProductError } from '../../src/errors/not-enough-money-to-buy-product.error';
 
-const feature = loadFeature('specs/features/buying-products.feature');
+const feature = loadFeature('shop/specs/features/buying-products.feature');
 
 defineFeature(feature, (test) => {
   test('Customer by product he is afford to.', ({ given, when, then, and }) => {
